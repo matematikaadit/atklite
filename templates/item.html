@@ -11,12 +11,13 @@
 </head>
 <body>
 <div id="main">
-<h1>Animetake Lite Version</h1>
-<ol>
-{%- for item in items %}
-    <li><a href="{{ url_for("item", urlname=item.urlname) }}" >{{ item.name }}</a></li>
+<h1>{{ item.name }}</h1>
+<ul>
+{%- for torrent in torrents %}
+    <li><a href="{{ torrent.href }}" >{{ torrent.name }}</a></li>
 {%- endfor -%}
-</ol>
+</ul>
+<a href="{{ url_for('index') }}" >Back</a>
 </div>
 </body>
 </html>
