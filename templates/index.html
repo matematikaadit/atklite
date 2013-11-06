@@ -12,16 +12,11 @@
 <body>
 <div id="main">
 <h1>Animetake Lite Version</h1>
-<ul>
-{% for item in items %}
+<ol>
+{%- for item in items %}
     <li>{{ item.name }}</li>
-<!--     <ul>
-    {% for torrent in item.torrents %}
-        <li><a href="{{ torrent.href|trim }}" > {{ torrent.name }}</a></li>
-    {% endfor %}
-    </ul> -->
-{% endfor %}
-</ul>
+{%- endfor -%}
+</ol>
 </div>
 </body>
 </html>
