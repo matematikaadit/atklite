@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Animetake Lite version</title>
+<style>
+#main {
+    max-width: 600px;
+    margin: auto;
+}
+</style>
+</head>
+<body>
+<div id="main">
+<h1>Animetake Lite Version</h1>
+<ul>
+{% for item in items %}
+    <li>{{ item.name }}</li>
+<!--     <ul>
+    {% for torrent in item.torrents %}
+        <li><a href="{{ torrent.href|trim }}" > {{ torrent.name }}</a></li>
+    {% endfor %}
+    </ul> -->
+{% endfor %}
+</ul>
+</div>
+</body>
+</html>
