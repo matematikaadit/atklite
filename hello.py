@@ -20,10 +20,5 @@ def item(urlname=None):
     torrents = item.parse_torrents()
     return render_template('item.html', item=item, torrents=torrents)
 
-@app.route('/hello/')
-@app.route('/hello/<name>')
-def hello(name="World"):
-    return render_template('hello.html', name=name)
-
 if __name__ == "__main__":
     app.run(debug=True)
