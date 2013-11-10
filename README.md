@@ -15,11 +15,13 @@ dimuat. Tentu saja ini jadi masalah tersendiri ketika halaman tersebut
 diakses melalui handphone. Apalagi handphone saya bukan smartphone. Halaman
 tadi jadi lebih lama dimuat dan tampilannya juga agak berantakan.
 
-Kedua, karena pada hari itu ada artikel yang membahas tentang XPath.
-Akhirnya muncullah ide ini. Memanfaatkan XPath (dengan library lxml) untuk
-memproses pengambilan data-data yang penting dari halaman di
-[animetake.com][atk] dan menampilkan bagian-bagian yang penting saja dengan bantuan web framework Flask. Sehingga didapat website yang bersih dan
-tentunya lebih ringan untuk dimuat. Serta lebih mobile-friendly.
+Kedua, karena pada hari senin yang lalu (4/11/13) ada artikel yang
+membahas tentang XPath. Akhirnya muncullah ide ini. Memanfaatkan XPath
+(dengan library lxml) untuk memproses pengambilan data-data yang
+penting dari halaman di [animetake.com][atk] dan menampilkan bagian-
+bagian yang penting saja dengan bantuan web framework Flask. Sehingga
+didapat website yang bersih dan tentunya lebih ringan untuk dimuat.
+Serta lebih mobile-friendly.
 
 Pustaka
 =======
