@@ -1,23 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Animetake Lite version</title>
-<style>
-#main {
-    max-width: 600px;
-    margin: auto;
-}
-</style>
-</head>
-<body>
-<div id="main">
-<h1>{{ item.name }}</h1>
+{% extends "base.html" %}
+
+{% block heading %}{{ item.name }}{% endblock %}
+
+{% block main %}
 <ul>
 {%- for torrent in torrents %}
     <li><a href="{{ torrent.href | trim }}" >{{ torrent.name }}</a></li>
 {%- endfor -%}
 </ul>
 <a href="{{ url_for('index') }}" >Back</a>
-</div>
-</body>
-</html>
+{% endblock %}
