@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block heading %}{{ item.name }}{% endblock %}
+{% block heading %}<h2>{{ item.name }}</h2>{% endblock %}
 
 {% block main %}
 <ul>
@@ -8,5 +8,4 @@
     <li><a href="{{ torrent.href | trim }}" >{{ torrent.name }}</a></li>
 {%- endfor -%}
 </ul>
-<a href="{{ url_for('index') }}" >Back</a>
 {% endblock %}
