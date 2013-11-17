@@ -1,4 +1,5 @@
 from lxml import html
+import requests
 import re
 
 URL = 'http://www.animetake.com/'
@@ -6,7 +7,11 @@ DL_PAGE_LINK_XPATH = '//div[@class="updateinfo"]/h4/a'
 TORRENT_LINK_XPATH = '//li[@class="tor"]/a'
 URLNAME_RE = r'^http://www\.animetake\.com/([^/]+)'
 
-document = html.parse(URL)
+def parse_url(url):
+    r = requests.get(url)
+    return html.fromstring(r.text)
+
+document = parse_url(URL)
 
 def to_tables(items):
     return { item.urlname: item for item in items }
@@ -40,7 +45,7 @@ class Item(Lister):
         self.urlname = link.parse_urlname()
 
     def parse_torrents(self):
-        page = html.parse(self.href)
+        page = parse_url(self.href)
         torrent_elems = page.xpath(TORRENT_LINK_XPATH)
         return Link.lister(torrent_elems)
 
