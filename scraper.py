@@ -11,12 +11,11 @@ def parse_url(url):
     r = requests.get(url)
     return html.fromstring(r.text)
 
-document = parse_url(URL)
-
 def to_tables(items):
     return { item.urlname: item for item in items }
 
 def get_items():
+    document = parse_url(URL)
     link_elems = document.xpath(DL_PAGE_LINK_XPATH)
     links = Link.lister(link_elems)
     items = Item.lister(links)
