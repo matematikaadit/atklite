@@ -27,10 +27,14 @@ Pustaka
 =======
 
 Bahasa pemrograman yang dipakai adalah bahasa **Python**. dengan
-memanfaatkan beberapa modul berikut:
-- **Flask**: framework untuk membuat aplikasi web.
-- **lxml**: modul untuk mengolah file XML (dan tentunya HTML). Untuk proses
+memanfaatkan beberapa modul/packages berikut:
+- [**Flask**](http://flask.pocoo.org/): framework untuk membuat
+  aplikasi web.
+- [**lxml**](http://lxml.de/): modul untuk mengolah file XML (dan tentunya
+  HTML). Untuk proses
   scrapping halaman.
+- [**requests**](http://www.python-requests.org/en/latest/): HTTP for
+  humans.
 
 LICENSE
 =======
