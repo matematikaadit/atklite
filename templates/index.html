@@ -4,7 +4,6 @@
 <ol>
 {%- for item in items %}
     <li><a href="{{ url_for("item", urlname=item.urlname) }}" >{{ item.name }}</a></li>
-{%- endfor -%}
-
+{%- endfor %}
 </ol>
 {% endblock %}
