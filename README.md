@@ -36,6 +36,58 @@ memanfaatkan beberapa modul/packages berikut:
 - [**requests**](http://www.python-requests.org/en/latest/): HTTP for
   humans.
 
+Instalasi di Heroku
+===================
+
+Pastikan kalian sudah memasang `heroku` di sistem kalian dan punya akun
+di http://heroku.com/, buat baru jika belum punya. Setelah itu login lewat
+terminal dengan menjalankan perintah berikut:
+
+```console
+$ heroku login
+Enter your Heroku credentials.
+Email: kenneth@example.com
+Password:
+Could not find an existing public key.
+Would you like to generate one? [Yn]
+Generating new SSH public key.
+Uploading ssh public key /Users/kenneth/.ssh/id_rsa.pub
+```
+
+Jika ada masalah dengan pengunggahan publik key kalian, coba eksekusi
+perintah `heroku keys:add`. Artikel lengkap ada di 
+[Heroku Quickstart](https://devcenter.heroku.com/articles/quickstart)
+
+Setelah itu clone repo ini dengan menjalankan perintah `git` berikut.
+
+```console
+$ git clone https://github.com/matematikaadit/atklit.git
+```
+
+Setelah itu buat `virtualenv` baru, aktifkan `virtualenv` tersebut, dan
+install semua requirements dengan `pip`.
+
+```console
+$ cd atklite
+$ virtualenv venv
+$ . ./venv/bin/activate
+$ pip install -r requirements.txt
+```
+
+Jika sukses, maka kalian bisa menjalankan perintah berikut:
+```console
+$ python atklite.py
+```
+
+Untuk mengunggah repo ini ke heroku, buat repo baru di heroku lalu push
+kode kita ke repo tersebut.
+```console
+$ heroku create
+$ git push heroku master
+```
+Selamat, atklite baru anda sudah aktif dan langsung bisa dibuka.
+Gunakan perintah `heroku open` untuk membukanya di browser default anda.
+
 LICENSE
 =======
 
