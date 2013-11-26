@@ -1,29 +1,69 @@
-/* Inspired by adobe/bracket
-   http://brackets.io
+/* 
+   Inspired by http://research.swtch.com
+   (Russ Cox's Blog)
  */
-html {
-    background-color: #eeeeee;
-}
-
 body {
+    padding: 0;
+    margin: 0; 
+    font-size: 100%;
+    font-family: "adobe-text-pro", serif;
+}
+.header .wrapper {
+    max-width: 600px;
     margin: 0 auto;
-    padding: 1em 2em 2em;
-    max-width: 800px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.header {
+    height: 1.25em;
+    background-color: #eed;
+    margin: 0 0 1em 0;
+    border-top: 1px solid black;
+    border-bottom: 1px solid #aaa;
+    padding: 0.1em 0.1em 0.2em;
+}
+.header h1 {
+    margin: 0 auto;
+    padding: 0 2em 0 5px;
+    display: inline-block;
+    font-style: italic;
+    font-size: 90%;
+}
+.header h2 {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    font-weight: normal;
+    font-size: 83%;
+}
+.header h1 a {
+    color: black;
+}
+#main {
+    max-width: 600px;
+    margin: 5px auto;
+    background-color: #ffe;
+    border: 1px solid #aa4;
+}
+.content {
     font-size: 14px;
-    line-height: 1.5em;
-    color: #333333;
-    background-color: #ffffff;
-    -webkit-box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
-    -moz-box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+    padding: 5px;
 }
-
-h1, h2, h3 {
-    line-height: 1.3em;
-    font-size: 16px;
+.content-header {
+    font-style: italic;
+    padding: 5px 0;
 }
-
-h1 a, h2 a, h3 a {
+.content ol, .content ul, .content li {
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.content ol, .content ul {
+    border-bottom: 1px dotted #ccc;
+}
+.content li {
+    border-top: 1px dotted #ccc;
+    padding: 5px 0;
+}
+.content ol li a, .content ul li a {
     text-decoration: none;
 }

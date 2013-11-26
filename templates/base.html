@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Animetake Lite version</title>
+<title>Atklite</title>
 <link rel="stylesheet" type="text/css"
   href="{{ url_for('static', filename='base.css') }}">
 </head>
 <body>
-<h1><a href="{{ url_for('index') }}" >Animetake Lite Version</a></h1>
-{% block heading %}{% endblock %}
+<div class="header">
+    <div class="wrapper">
+    <h1><a href="{{ url_for('index') }}">Atklite</a></h1><h2>Download anime torrents!</h2>
+    </div>
+</div>
+<div id="main">
+<div class="content">
+<div class="content-header">{% block heading %}{% endblock %}</div>
 {% block main %}
 {% endblock %}
+</div>
+</div>
+</div>
 </body>
 </html>
