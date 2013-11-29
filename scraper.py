@@ -3,7 +3,7 @@ import requests
 import re
 
 URL = 'http://www.animetake.com/'
-DL_PAGE_LINK_XPATH = '//div[@class="updateinfo"]/h4/a'
+DL_PAGE_LINK_XPATH = '//div[@class="updateinfo" and not(a[.="Announcment"])]/h4/a'
 TORRENT_LINK_XPATH = '//li[@class="tor"]/a'
 URLNAME_RE = r'^http://www\.animetake\.com/([^/]+)'
 
