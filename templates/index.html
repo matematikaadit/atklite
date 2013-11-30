@@ -3,7 +3,7 @@
 {% block main %}
 <ol>
 {%- for item in items %}
-    <li><a href="{{ url_for("item", urlname=item.urlname) }}" >{{ item.name }}</a></li>
+    <li><a href="{{ url_for("item", urlname=item.urlname) }}" >{{ item.name }}</a><span class="when">({{ item.date }})</span></li>
 {%- endfor %}
 </ol>
 {% endblock %}

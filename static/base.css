@@ -38,7 +38,7 @@ body {
 }
 #main {
     max-width: 600px;
-    margin: 5px auto;
+    margin: 10px auto;
     background-color: #ffe;
     border: 1px solid #aa4;
 }
@@ -65,4 +65,8 @@ body {
 }
 .content ol li a, .content ul li a {
     text-decoration: none;
+}
+.when {
+    color: #999;
+    padding: 0 5px;
 }

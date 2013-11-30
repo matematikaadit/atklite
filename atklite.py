@@ -1,5 +1,5 @@
 from flask import Flask, render_template, abort, url_for
-from scraper import get_items, to_tables
+from scraper import get_items, items_to_tables
 
 app = Flask(__name__)
 
@@ -13,7 +13,7 @@ def item(urlname=None):
     if urlname is None:
         abort(401)
     items = get_items()
-    tables = to_tables(items)
+    tables = items_to_tables(items)
     if urlname not in tables:
         abort(404)
     item = tables[urlname]
