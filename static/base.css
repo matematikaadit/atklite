@@ -65,6 +65,8 @@ body {
 }
 .content ol li a, .content ul li a {
     text-decoration: none;
+    color: black;
+    font-weight: bold;
 }
 .when {
     color: #999;
