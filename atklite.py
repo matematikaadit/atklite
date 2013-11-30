@@ -7,11 +7,11 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     items = get_items()
-    today = date.today().strftime("%A %B %d, %y")
+    today = date.today().strftime("%A %B %d, %Y")
     # %A: Weekday full: Saturday
     # %B: Month full: November
-    # %d: day
-    # %y: year
+    # %d: day: 30
+    # %Y: full year: 2013
     return render_template('index.html', items=items, today=today)
 
 @app.route('/item/<urlname>')
