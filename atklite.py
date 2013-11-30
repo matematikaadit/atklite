@@ -1,12 +1,18 @@
 from flask import Flask, render_template, abort, url_for
 from scraper import get_items, items_to_tables
+from datetime import date
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
     items = get_items()
-    return render_template('index.html', items=items)
+    today = date.today().strftime("%A %B %d, %y")
+    # %A: Weekday full: Saturday
+    # %B: Month full: November
+    # %d: day
+    # %y: year
+    return render_template('index.html', items=items, today=today)
 
 @app.route('/item/<urlname>')
 def item(urlname=None):

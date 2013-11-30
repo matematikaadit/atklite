@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 
-{% block heading %}{{ item.name }}{% endblock %}
+{% block heading %}
+{{ item.name }}<span class="when">( {{ item.date }})</span>
+{% endblock %}
 
 {% block main %}
 <ul>
