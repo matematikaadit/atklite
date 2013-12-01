@@ -46,13 +46,15 @@ terminal dengan menjalankan perintah berikut:
 ```console
 $ heroku login
 Enter your Heroku credentials.
-Email: kenneth@example.com
+Email: komachan@example.com
 Password:
 Could not find an existing public key.
 Would you like to generate one? [Yn]
 Generating new SSH public key.
 Uploading ssh public key /Users/kenneth/.ssh/id_rsa.pub
 ```
+
+Ganti komachan@example.com dengan email login anda di heroku.
 
 Jika ada masalah dengan pengunggahan publik key kalian, coba eksekusi
 perintah `heroku keys:add`. Artikel lengkap ada di 
@@ -64,8 +66,8 @@ Setelah itu clone repo ini dengan menjalankan perintah `git` berikut.
 $ git clone https://github.com/matematikaadit/atklit.git
 ```
 
-Setelah itu buat `virtualenv` baru, aktifkan `virtualenv` tersebut, dan
-install semua requirements dengan `pip`.
+Langkah berikutnya buat `virtualenv` baru, dan install semua packages yang
+diperlukan. Perintahnya sebagai berikut:
 
 ```console
 $ cd atklite
@@ -74,10 +76,12 @@ $ . ./venv/bin/activate
 $ pip install -r requirements.txt
 ```
 
-Jika sukses, maka kalian bisa menjalankan perintah berikut:
+Sekarang kalian bisa menjalankan perintah berikut untuk mengaktifkan server
+untuk development:
 ```console
 $ python atklite.py
 ```
+Halaman Flask app kalian akan aktif di http://127.0.0.1:5000/
 
 Untuk mengunggah repo ini ke heroku, buat repo baru di heroku lalu push
 kode kita ke repo tersebut.
@@ -85,7 +89,8 @@ kode kita ke repo tersebut.
 $ heroku create
 $ git push heroku master
 ```
-Selamat, atklite baru anda sudah aktif dan langsung bisa dibuka.
+
+Selamat, sekarang atklite baru anda sudah aktif dan langsung bisa dibuka.
 Gunakan perintah `heroku open` untuk membukanya di browser default anda.
 
 LICENSE
@@ -93,7 +98,7 @@ LICENSE
 
 The MIT License (MIT)
 
-Detail silakan lihat di file [LICENSE](/LICENSE).
+Detail lihat file [LICENSE](/LICENSE).
 
 [atk]: http://www.animetake.com
 [atklite]: http://atklite.herokuapp.com
